@@ -4,6 +4,7 @@ import { useSelector, useDispatch } from 'react-redux'
 
 import { operations, selectors } from '../../redux';
 
+
 // import * as operations from '../../redux/operations'
 // import * as selectors from '../../redux/selectors'
 
@@ -25,7 +26,7 @@ function Contacts() {
                     className={styles.contactItem}>
                     {name}:
                     <span className={styles.contactTel}>{number}</span>
-                    {/* <button onClick={() => dispatch(deleteContact(id))} className={styles.button}>Delete</button> */}
+                    <button onClick={() => dispatch(operations.deleteContact(id))} className={styles.button}>Delete</button>
                 </li>
             ))}
         </ul>

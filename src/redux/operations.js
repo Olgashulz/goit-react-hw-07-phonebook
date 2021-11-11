@@ -1,19 +1,7 @@
 import { createAsyncThunk } from '@reduxjs/toolkit'
-
-import * as actions from './actions'
 import * as api from '../components/api';
 
-// export const fetchContactsOpration = () => async dispatch => {
-//     dispatch(actions.fetchContactsRequest());
 
-//     try {
-//         const contacts = await api.fetchContacts();
-//         dispatch(actions.fetchContactsSuccess(contacts));
-
-//     } catch (error) {
-//         dispatch(actions.fetchContactsError(error))
-//     }
-// }
 
 
 export const fetchContacts = createAsyncThunk(
@@ -40,6 +28,30 @@ export const addContact = createAsyncThunk(
         }
     }
 )
+
+export const deleteContact = createAsyncThunk(
+    'contacts/deleteContact',
+    async (contactId, { rejectWithValue }) => {
+        try {
+            const contacts = await api.deleteContact(contactId);
+            return contacts;
+        } catch (error) {
+            return rejectWithValue(error);
+        }
+    }
+)
+
+// export const fetchContactsOpration = () => async dispatch => {
+//     dispatch(actions.fetchContactsRequest());
+
+//     try {
+//         const contacts = await api.fetchContacts();
+//         dispatch(actions.fetchContactsSuccess(contacts));
+
+//     } catch (error) {
+//         dispatch(actions.fetchContactsError(error))
+//     }
+// }
 
 // export const addContactsOpration = () => async dispatch => {
 //     dispatch(actions.addContactRequest());

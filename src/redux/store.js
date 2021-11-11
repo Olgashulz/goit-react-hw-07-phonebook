@@ -37,12 +37,3 @@ const store = configureStore({
 
 export default store;
 
-//////////////////////////////////////////////////////////////////////////////////////////
-// import { createStore } from 'redux';
-// import { rootReducer } from './reducers';
-
-// console.log(rootReducer)
-
-// const store = createStore(rootReducer);
-
-// export default store;
