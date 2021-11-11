@@ -4,6 +4,7 @@ import Filter from "./components/Filter";
 import styles from './App.module.css';
 
 export default function App() {
+  // fetchContacts()
 
   return (
     <>
@@ -13,7 +14,7 @@ export default function App() {
           <Form />
 
           <h2 className={styles.titleContacts}>Contacts</h2>
-          <Filter />
+          {/* <Filter /> */}
           <Contacts />
 
         </div>

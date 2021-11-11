@@ -14,9 +14,9 @@ const Filter = () => {
                 type="text"
                 name="name"
                 value={filter}
-                onChange={event => dispatch(filterContact(event.target.value))}
+                // onChange={event => dispatch(filterContact(event.target.value))}
                 className={styles.inputForm}
-                onBlur={() => dispatch(resetFilter())}
+            // onBlur={() => dispatch(resetFilter())}
             />
         </label>
     )

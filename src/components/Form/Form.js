@@ -1,8 +1,11 @@
 import { useState } from "react";
 import styles from './Form.module.css';
-import { addContact } from "../../redux/actions";
+// import { addContact, addContactRequest, addContactSuccess } from "../../redux/actions";
 import { useDispatch, useSelector } from "react-redux";
-import { visibleContacts } from '../../redux/selectors'
+// import { visibleContacts } from '../../redux/selectors';
+
+import { operations } from '../../redux';
+// import * as operations from '../../redux/operations';
 
 import shortid from 'shortid';
 
@@ -14,7 +17,10 @@ export default function Form(props) {
     const [number, setNumber] = useState('');
     const [disabled, setDisabled] = useState(false);
 
-    const contacts = useSelector(visibleContacts)
+    // const contacts = useSelector(visibleContacts)
+    const contacts = useSelector(state => state.items);
+
+
     const dispatch = useDispatch();
 
     const handleInputChange = event => {
@@ -39,13 +45,13 @@ export default function Form(props) {
     const handleSubmit = (event) => {
         event.preventDefault();
 
-        const addNewContact = {
+        const newContact = {
             id: shortid.generate(),
             name: name,
             number: number
         }
 
-        dispatch(addContact(addNewContact));
+        dispatch(operations.addContact(newContact));
         resetForm();
     }
 
