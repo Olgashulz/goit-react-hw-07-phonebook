@@ -7,6 +7,8 @@ const items = createReducer([], {
     [deleteContact.fulfilled]: (state, action) => state.filter((contact) => contact.id !== action.payload),
 });
 
+
+
 const isLoading = createReducer(false, {
     [fetchContacts.pending]: () => true,
     [fetchContacts.fulfilled]: () => false,

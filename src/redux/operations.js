@@ -1,5 +1,7 @@
 import { createAsyncThunk } from '@reduxjs/toolkit'
 import * as api from '../components/api';
+import { useDispatch, useSelector } from "react-redux";
+
 
 
 
@@ -30,15 +32,20 @@ export const addContact = createAsyncThunk(
 )
 
 export const deleteContact = createAsyncThunk(
+
     'contacts/deleteContact',
+
     async (contactId, { rejectWithValue }) => {
         try {
             const contacts = await api.deleteContact(contactId);
+            // const dispatch = useDispatch()
+            // dispatch(fetchContacts())
             return contacts;
         } catch (error) {
             return rejectWithValue(error);
         }
     }
+
 )
 
 // export const fetchContactsOpration = () => async dispatch => {

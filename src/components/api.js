@@ -12,7 +12,8 @@ export const addContact = value => {
 };
 
 export const deleteContact = contactId => {
-    return axios.delete(`/contacts/${contactId}`);
+    axios.delete(`/contacts/${contactId}`);
+    return contactId;
 };
 
 export const updateContact = (contactId, update) => {
