@@ -5,11 +5,10 @@ import { useSelector, useDispatch } from 'react-redux'
 import { operations, selectors } from '../../redux';
 
 
-// import * as operations from '../../redux/operations'
-// import * as selectors from '../../redux/selectors'
+
 
 function Contacts() {
-    const contacts = useSelector(selectors.getContacts);
+    const contacts = useSelector(selectors.visibleContacts);
     //const contacts = useSelector(state => state.items);
 
     // const filter = useSelector(state => state.filter);

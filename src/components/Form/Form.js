@@ -54,11 +54,11 @@ export default function Form(props) {
         dispatch(operations.addContact(newContact));
         resetForm();
     }
-
     const resetForm = () => {
         setName('');
         setNumber('');
     }
+
 
     const findNameInContact = (event) => {
         if (contacts.find((contact) =>

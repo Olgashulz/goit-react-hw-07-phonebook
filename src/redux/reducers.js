@@ -1,5 +1,6 @@
 import { combineReducers, createReducer } from "@reduxjs/toolkit";
 import { fetchContacts, addContact, deleteContact } from "./operations"
+import { filterContact, resetFilter, sortContact } from "./actions"
 
 const items = createReducer([], {
     [fetchContacts.fulfilled]: (_, { payload }) => payload,
@@ -29,17 +30,30 @@ const error = createReducer(null, {
     [fetchContacts.pending]: () => null,
 })
 
-// const filter = createReducer('', {
-//     [actions.filterContact]: (state, action) => action.payload,
-//     [actions.resetFilter]: (state, action) => state = '',
+const filter = createReducer('', {
+    [filterContact]: (state, action) => action.payload,
+    [resetFilter]: (state, action) => state = '',
+
+});
+
+// const sort = createReducer([{ "name": "noSort", "status": true }, { "name": "sortToStart", "status": false }, { "name": "sortToEnd", "status": false }], {
+//     // [sortContact]: (state, action) => state.map((contact) => contact.name === action.payload),
+//     [sortContact]: (state, { payload }) => state.map(contact => contact.name ? payload : contact),
 
 // });
 
+const sort = createReducer('sortToEnd', {
+    // [sortContact]: (state, action) => state.map((contact) => contact.name === action.payload),
+    [sortContact]: (state, { payload }) => payload,
+});
+
+
 const rootReducer = combineReducers({
     items,
-    // filter,
+    filter,
     isLoading,
     error,
+    sort,
 })
 
 export default rootReducer;

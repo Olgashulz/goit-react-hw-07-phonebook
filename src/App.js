@@ -2,9 +2,9 @@ import Form from './components/Form';
 import Contacts from './components/Contacts';
 import Filter from "./components/Filter";
 import styles from './App.module.css';
+// import Sort from 'components/Sort';
 
 export default function App() {
-  // fetchContacts()
 
   return (
     <>
@@ -14,8 +14,9 @@ export default function App() {
           <Form />
 
           <h2 className={styles.titleContacts}>Contacts</h2>
-          {/* <Filter /> */}
+          <Filter />
           <Contacts />
+
 
         </div>
       </div>

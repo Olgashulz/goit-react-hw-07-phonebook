@@ -12,6 +12,14 @@
   text-align: right;
   padding: 5px;
   width: 100%;
+  /* margin-top: 10px;
+  margin-bottom: 20px; */
+}
+
+.box {
+  display: flex;
+  align-items: center;
+  justify-content: end;
   margin-top: 10px;
   margin-bottom: 20px;
 }

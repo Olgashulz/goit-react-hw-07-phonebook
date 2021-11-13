@@ -1,0 +1,86 @@
+.noSort {
+  width: 30px;
+  height: 29px;
+  background-image: url(../../pictures/icons/clear-filter.png);
+  background-repeat: no-repeat;
+  background-size: contain;
+  border: none;
+  padding: 5px;
+  margin-left: 5px;
+  cursor: pointer;
+}
+
+.sortToEnd {
+  width: 30px;
+  height: 29px;
+  background-image: url(../../pictures/icons/az.png);
+  background-repeat: no-repeat;
+  background-size: contain;
+  border: none;
+  padding: 5px;
+  margin-left: 5px;
+  cursor: pointer;
+}
+
+.sortToStart {
+  width: 30px;
+  height: 29px;
+  background-image: url(../../pictures/icons/za.png);
+  background-repeat: no-repeat;
+  background-size: contain;
+  border: none;
+  padding: 5px;
+  margin-left: 5px;
+  cursor: pointer;
+}
+
+/* .select {
+  margin: 0 auto;
+  position: relative;
+  width: 250px;
+}
+.select.is-active .body {
+  display: block;
+}
+
+.header {
+  border: 1px solid #ccc;
+  cursor: pointer;
+  display: flex;
+}
+.current {
+  font-size: 18px;
+  line-height: 24px;
+  padding: 8px;
+}
+.icon {
+  align-items: center;
+  display: flex;
+  flex-shrink: 0;
+  justify-content: center;
+  height: 40px;
+  margin-left: auto;
+  text-align: center;
+  width: 40px;
+}
+
+.body {
+  border: 1px solid #cccccc;
+  border-top: 0;
+  display: none;
+  left: 0;
+  position: absolute;
+  right: 0;
+  top: 100%;
+}
+
+.item {
+  cursor: pointer;
+  font-size: 16px;
+  line-height: 24px;
+  padding: 8px;
+}
+
+.item:hover {
+  background-color: #f2f2f2;
+} */
