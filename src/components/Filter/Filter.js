@@ -21,7 +21,6 @@ const Filter = () => {
                     className={styles.inputForm}
                     onBlur={() => dispatch(resetFilter())}
                 />
-
             </div>
             <Sort />
         </label>

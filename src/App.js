@@ -16,8 +16,6 @@ export default function App() {
           <h2 className={styles.titleContacts}>Contacts</h2>
           <Filter />
           <Contacts />
-
-
         </div>
       </div>
     </>
