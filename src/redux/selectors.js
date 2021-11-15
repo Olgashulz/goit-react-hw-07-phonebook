@@ -5,9 +5,9 @@ export const getContacts = state => state.items;
 
 
 export const visibleContacts = ({ items, filter, sort }) => {
-    const sortedContact = sortItems(sort, items)
-    console.log(sortedContact)
-    return sortedContact.filter(contact =>
+    const sortedContacts = sortItems(sort, items)
+    console.log(sortedContacts)
+    return sortedContacts.filter(contact =>
         contact.name.toLowerCase().trim().includes(filter.toLowerCase().trim())
 
     );
