@@ -1,6 +1,7 @@
 import React, { useEffect } from 'react';
 import styles from './Contacts.module.css';
 import { useSelector, useDispatch } from 'react-redux'
+import { sortItems } from '../../redux/selectors'
 
 import { operations, selectors } from '../../redux';
 
@@ -9,9 +10,9 @@ import { operations, selectors } from '../../redux';
 
 function Contacts() {
     const contacts = useSelector(selectors.visibleContacts);
-    //const contacts = useSelector(state => state.items);
 
-    // const filter = useSelector(state => state.filter);
+    // const contacts = useSelector(selectors.visibleContacts);
+
     const dispatch = useDispatch()
 
     useEffect(() => {

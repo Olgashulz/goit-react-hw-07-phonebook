@@ -9,44 +9,9 @@ import { operations, selectors } from '../../redux';
 
 // let bg = '../../pictures/icons/clear-filter.png'
 const Sort = () => {
-
     const dispatch = useDispatch();
     const items = useSelector(selectors.visibleContacts);
-    const sortType = useSelector(state => state.sort)
-
-
-    // const sortItems = (sortType) => {
-    //     switch (sortType) {
-    //         case 'noSort':
-    //             return items;
-
-    //         case 'sortToEnd':
-    //             return items.sort(function (a, b) {
-    //                 if (a.name > b.name) {
-    //                     return 1;
-    //                 }
-    //                 if (a.name < b.name) {
-    //                     return -1;
-    //                 }
-    //                 return 0;
-    //             });
-
-    //         case 'sortToStart':
-    //             return items.sort(function (a, b) {
-    //                 if (a.name < b.name) {
-    //                     return 1;
-    //                 }
-    //                 if (a.name > b.name) {
-    //                     return -1;
-    //                 }
-    //                 return 0;
-    //             });
-
-    //         default:
-    //             return;
-    //     }
-    // }
-
+    const sort = useSelector(state => state.sort)
 
     return (
         <>

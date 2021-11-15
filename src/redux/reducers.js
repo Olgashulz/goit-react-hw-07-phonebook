@@ -42,7 +42,7 @@ const filter = createReducer('', {
 
 // });
 
-const sort = createReducer('sortToEnd', {
+const sort = createReducer('noSort', {
     // [sortContact]: (state, action) => state.map((contact) => contact.name === action.payload),
     [sortContact]: (state, { payload }) => payload,
 });
