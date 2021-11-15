@@ -1,9 +1,12 @@
+// import { sortContact } from "./actions";
+
 export const getContacts = state => state.items;
 
 
 
 export const visibleContacts = ({ items, filter, sort }) => {
-    const sortedContact = sortItems({ sort, items })
+    const sortedContact = sortItems(sort, items)
+    console.log(sortedContact)
     return sortedContact.filter(contact =>
         contact.name.toLowerCase().trim().includes(filter.toLowerCase().trim())
 
@@ -11,7 +14,7 @@ export const visibleContacts = ({ items, filter, sort }) => {
 
 };
 
-export const sortItems = ({ sort, items }) => {
+export const sortItems = (sort, items) => {
     switch (sort) {
         case 'noSort':
             return items;
