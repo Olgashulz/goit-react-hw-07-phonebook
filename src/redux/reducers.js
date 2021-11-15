@@ -36,15 +36,10 @@ const filter = createReducer('', {
 
 });
 
-// const sort = createReducer([{ "name": "noSort", "status": true }, { "name": "sortToStart", "status": false }, { "name": "sortToEnd", "status": false }], {
-//     // [sortContact]: (state, action) => state.map((contact) => contact.name === action.payload),
-//     [sortContact]: (state, { payload }) => state.map(contact => contact.name ? payload : contact),
 
-// });
-
-const sort = createReducer('noSort', {
-    // [sortContact]: (state, action) => state.map((contact) => contact.name === action.payload),
+const sort = createReducer([], {
     [sortContact]: (state, { payload }) => payload,
+
 });
 
 

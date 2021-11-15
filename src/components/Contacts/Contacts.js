@@ -11,8 +11,6 @@ import { operations, selectors } from '../../redux';
 function Contacts() {
     const contacts = useSelector(selectors.visibleContacts);
 
-    // const contacts = useSelector(selectors.visibleContacts);
-
     const dispatch = useDispatch()
 
     useEffect(() => {
