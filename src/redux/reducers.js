@@ -1,6 +1,6 @@
 import { combineReducers, createReducer } from "@reduxjs/toolkit";
 import { fetchContacts, addContact, deleteContact } from "./operations"
-import { filterContact, resetFilter, sortContact, sortMethod } from "./actions"
+import { filterContact, resetFilter } from "./actions"
 
 const items = createReducer([], {
     [fetchContacts.fulfilled]: (_, { payload }) => payload,

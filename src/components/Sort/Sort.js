@@ -1,13 +1,12 @@
 
 // import React from "react";
-import React, { useEffect } from 'react';
 
 import styles from './Sort.module.css';
 import { useSelector, useDispatch } from "react-redux";
 import { sortContact } from "../../redux/actions";
 
-import bg from '../../pictures/icons/clear-filter.png'
-import { operations, selectors } from '../../redux';
+// import bg from '../../pictures/icons/clear-filter.png'
+import { selectors } from '../../redux';
 
 // let bg = '../../pictures/icons/clear-filter.png'
 const Sort = () => {
