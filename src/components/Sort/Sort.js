@@ -13,10 +13,16 @@ import { operations, selectors } from '../../redux';
 const Sort = () => {
     const dispatch = useDispatch();
     const items = useSelector(selectors.visibleContacts);
+
+    // useEffect(() => {
+    //     dispatch(sortContact(items))
+    // }, []);
+
     // const sort = useSelector(state => state.sort)
 
     const sortItems = (sort) => {
         console.log(sort)
+        console.log(items)
         switch (sort) {
             case 'noSort':
                 return items;

@@ -1,6 +1,6 @@
 import { combineReducers, createReducer } from "@reduxjs/toolkit";
 import { fetchContacts, addContact, deleteContact } from "./operations"
-import { filterContact, resetFilter, sortContact } from "./actions"
+import { filterContact, resetFilter, sortContact, sortMethod } from "./actions"
 
 const items = createReducer([], {
     [fetchContacts.fulfilled]: (_, { payload }) => payload,
@@ -37,10 +37,10 @@ const filter = createReducer('', {
 });
 
 
-const sort = createReducer([], {
-    [sortContact]: (state, { payload }) => payload,
-
-});
+// const sort = createReducer([], {
+//     [fetchContacts.fulfilled]: (_, { payload }) => payload,
+//     [sortContact]: (state, { payload }) => payload,
+// });
 
 
 const rootReducer = combineReducers({
@@ -48,7 +48,7 @@ const rootReducer = combineReducers({
     filter,
     isLoading,
     error,
-    sort,
+    // sort,
 })
 
 export default rootReducer;

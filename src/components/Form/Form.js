@@ -17,14 +17,12 @@ export default function Form(props) {
     const [number, setNumber] = useState('');
     const [disabled, setDisabled] = useState(false);
 
-    // const contacts = useSelector(visibleContacts)
     const contacts = useSelector(state => state.items);
 
 
     const dispatch = useDispatch();
 
     const handleInputChange = event => {
-        // console.log(event.currentTarget.value);
         const { name, value } = event.currentTarget;
         setDisabled(false);
 
